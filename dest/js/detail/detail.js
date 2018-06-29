@@ -1,0 +1,1 @@
+"use strict";define(["jquery","getUrl","common","text!template/detail.html"],function(t,e,o,n){var a=e("id");t.ajax({url:"/api/detail?id="+a,dataType:"json",success:function(e){console.log(e),console.log(),o(n,e,".wangao"),t(".wangao").on("click",".btn1",function(){window.location.href="../page/read.html?id="+e.item.source_id+"&chapternum="+e.item.chapter_count})}})});
